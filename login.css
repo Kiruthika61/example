@@ -1,0 +1,27 @@
+body{
+    margin: auto;
+    padding: auto;
+    display: flex;
+}
+
+.box{
+    display: flexbox;
+    border: 1px solid;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    margin: 10px;
+}
+
+button{
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+.title{
+    margin-left: 60px;
+}

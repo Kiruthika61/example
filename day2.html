@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <button onclick="typewrite()">Text:<input id="text" type="text"></button>
+            <button onclick="speed()">Speed:<input id="speed" type="number"></button>
+            <button>Size:<input id="size" type="number"></button>
+        </div>
+        <div>
+            <p id="result"></p>     
+        </div>
+    </div>
+
+    <script>
+     var speed=80
+     var i=0
+
+      function typewrite(){
+        var txt=document.getElementById("text").value
+        var res=document.getElementById("result")
+        
+        i=0
+        res.innerHTML=""
+
+        function type(){
+             if(i<txt.length){
+                res.innerHTML+=txt.charAt(i)
+                i++
+                setTimeout(type,speed)
+             }
+        }
+        type()
+
+      }
+
+    </script>
+</body>
+</html>
